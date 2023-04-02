@@ -6,7 +6,4 @@ export const developmentRouter = createTRPCRouter({
       greeting: `Still in development`,
     };
   }),
-  getAll: publicProcedure.query(({ ctx }) => {
-    return ctx.prisma.example.findMany();
-  }),
 });
