@@ -1,7 +1,6 @@
 import { type NextPage } from "next";
 
 import { api } from "~/utils/api";
-import { LoadingSpinner } from "~/componenets/loadingSpinner";
 
 const Home: NextPage = () => {
   const hello = api.development.hello.useQuery();
@@ -17,7 +16,6 @@ const Home: NextPage = () => {
           <p className="text-2xl text-white">
             {hello.data ? hello.data.greeting : "Loading tRPC query..."}
           </p>
-          <LoadingSpinner size={50} />
         </div>
       </main>
     </>
